@@ -25,13 +25,16 @@ function Slide() {
             style={{
               width: "350px",
               borderRadius: "50%",
-              marginBottom: "20px",
+              marginBottom: "250px",
             }}
           />
         </div>
         <div style={{ textAlign: "left", maxWidth: "75%" }}>
           <p>
-            <strong>Name:</strong> Gordan Nekić
+            <strong>Name:</strong> Gordan <a style={{
+          transform: 'rotate(20deg)',
+          display: 'inline-block'
+        }}>N</a>ekić
           </p>
           <p>
             <strong>Role:</strong> Lead Engineer @ Elixirr Digital

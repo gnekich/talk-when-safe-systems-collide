@@ -4,13 +4,91 @@ function Slide() {
   return (
     <>
       <section>
-        <h3>Timeline</h3>
-        <ol>
-          <li>Notice the unexpected behavior</li>
-          <li>Reproduce in a safe environment</li>
-          <li>Assess impact scope</li>
-          <li>Report and coordinate a fix</li>
-        </ol>
+        <h3>Pa krenimo redom...</h3>
+        <SpeakerNotes>Pa eto krenimo redom.</SpeakerNotes>
+      </section>
+
+      <section>
+        <h3>Što je Firebase?</h3>
+        <img src="assets/firebase.png" alt="Firebase screenshot" style={{}} />
+        <SpeakerNotes>Prvo kratko ćemo objasniti što je Firebase.</SpeakerNotes>
+      </section>
+
+      <section>
+        <section>
+        <h3>Što je Firebase Authentication?</h3>
+        <img
+          src="assets/firebase-authentication.png"
+          alt="Firebase Authentication screenshot"
+          style={{}}
+        />
+        <SpeakerNotes>
+          Prvo kratko ćemo objasniti što je Firebase Authentication.
+        </SpeakerNotes>
+        </section>
+        <section>
+          <h3>Što kaže Google?</h3>
+          <iframe
+            width="780"
+            height="420"
+            src="https://www.youtube-nocookie.com/embed/8sGY55yxicA?si=AWpS8kAszgHDzw0v&amp;start=15"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </section>
+      </section>
+
+      <section>
+        <h3>Što je zaista Firebase i Firebase Authentication?</h3>
+        <div
+          style={{ flexDirection: "row", display: "flex", justifyContent: "space-between" }}
+        >
+        <img
+          height="515"
+          src="assets/firebase-gcp-meme.png"
+          alt="Firebase Firebase GCP meme"
+          style={{
+            marginLeft: "50px",
+          }}
+        />
+        <img
+          height="515"
+          src="assets/firebase-authentication-gcp-meme.png"
+          alt="Firebase Firebase GCP meme"
+          style={{
+            marginRight: "50px",
+          }}
+        />
+        </div>
+        <SpeakerNotes>
+          Prvo kratko ćemo objasniti što je Firebase Authentication.
+        </SpeakerNotes>
+      </section>
+      <section>
+       <img
+          height="515"
+          src="assets/mooolim.png"
+          alt="Mooolim meme"
+          style={{
+          }}
+        />
+        <SpeakerNotes>
+          We’ll move chronologically. Each phase has its own lessons.
+        </SpeakerNotes>
+      </section>
+      <section>
+        <h4>To znači da ako vas netko doda u Firebase Projekt, na kojem je uključen billing, on može kreirati <a>bilo koji servis na Google Cloud Platformi!!!</a></h4>
+        <img
+          height="515"
+          src="assets/gcp-firebase-issue.png"
+          alt="Firebase Firebase GCP meme"
+          style={{
+            marginRight: "50px",
+          }}
+        /> 
         <SpeakerNotes>
           We’ll move chronologically. Each phase has its own lessons.
         </SpeakerNotes>

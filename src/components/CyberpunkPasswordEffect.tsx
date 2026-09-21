@@ -5,6 +5,7 @@ export function PasswordGlitchTypeEffectText({
 }: {
   children: string;
 }) {
+  const [animateTimestamp, setAnimateTimestamp] = useState(Date.now());
   const elementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -30,9 +31,9 @@ export function PasswordGlitchTypeEffectText({
       }
     }, 30);
     return () => clearInterval(interval);
-  }, []);
+  }, [animateTimestamp]);
 
-  return <span ref={elementRef}>{children}</span>;
+  return <span onClick={() => setAnimateTimestamp(Date.now())} ref={elementRef}>{children}</span>;
 }
 
 export default PasswordGlitchTypeEffectText;
