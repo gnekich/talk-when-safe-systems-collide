@@ -4,19 +4,7 @@ function Slide() {
   return (
     <>
       <section>
-        <section>
-          <h3>Pitanja publike</h3>
-          <ol>
-            <li>
-              Mogu li dodane sigurnosne kontrole uvijek povećati sigurnost, ili
-              mogu smanjiti sigurnost?
-            </li>
-            <li>U složenom sustavu, tko je odgovoran za kvar?</li>
-          </ol>
-          <SpeakerNotes>
-            Ovdje stajemo za raspravu. Neka se ljudi uključe s obje strane.
-          </SpeakerNotes>
-        </section>
+       
         <section>
           <h3>Model zajedničke odgovornosti</h3>
           <ul>

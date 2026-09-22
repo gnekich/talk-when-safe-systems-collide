@@ -78,11 +78,7 @@ function App() {
         <Goals />
         {/* <CompanySlide /> */}
         <MainStory />
-        <WhatIsCTFSlide />
-        <WhatWillYouEncounterSlide />
         <DemoSlide />
-        <WhenWeBecomeGoodAtItSlide />
-        <UsefulLinksSlide />
         <Zakljucak />
       </div>
     </div>

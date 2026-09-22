@@ -30,11 +30,15 @@ function Slide() {
     <>
       <section>
         <h2>Zaključak</h2>
-        <p>Sigurni sustavi mogu postati nesigurni kada se kombiniraju.</p>
+        <p>Kombinacija više sigurnih sustava može rezultirati nesigurnim ponašanjem.</p>
         <ul>
+          <li>Mailboxes are alive, and they can act autonomously!</li>
           <li>Design for scanners, agents, not just humans!</li>
           <li>Require explicit intent for sensitive actions!</li>
           <li>Coordinate across vendors!</li>
+          <li>Don't trust big tech blindly!</li>
+          <li>Don't do magic side effects!</li>
+          <li>Don't be evil!</li>
         </ul>
         <SpeakerNotes>
           Zaključak je da sigurni sustavi mogu postati nesigurni kada se

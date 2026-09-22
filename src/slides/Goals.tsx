@@ -50,7 +50,7 @@ function Slide() {
 
           <li>
             <a>Hack the planet!</a>  Let's do a Live demo of the {daysSinceReport}-day vulnerability
-            in GCP production. (Zero click authentication bypass)
+            in GCP production. (Zero click authentication verification bypass)
           </li>
         </ol>
         <SpeakerNotes>

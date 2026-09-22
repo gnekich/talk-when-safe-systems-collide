@@ -248,7 +248,7 @@ function FirebaseAuthDemo() {
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              style={{ width: "100%", padding: "10px 12px", borderRadius: "8px" }}
+              style={{ width: "90%", padding: "10px 12px", borderRadius: "8px" }}
             />
           </label>
 
@@ -258,7 +258,7 @@ function FirebaseAuthDemo() {
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              style={{ width: "100%", padding: "10px 12px", borderRadius: "8px" }}
+              style={{ width: "90%", padding: "10px 12px", borderRadius: "8px" }}
             />
           </label>
         </div>
@@ -274,7 +274,7 @@ function FirebaseAuthDemo() {
           <button onClick={handleRegister}>Register</button>
           <button onClick={handleLogin}>Login</button>
           <button onClick={handleLogout}>Logout</button>
-          <button onClick={simulateScannerAction}>Scanner opens link</button>
+          {/* <button onClick={simulateScannerAction}>Scanner opens link</button> */}
         </div>
 
         <p style={{ marginTop: "16px", fontSize: "0.9em", color: "#d0d7de" }}>
@@ -311,7 +311,8 @@ function FirebaseAuthDemo() {
             background: "rgba(0,0,0,0.2)",
             padding: "10px",
             borderRadius: "8px",
-            minHeight: "120px",
+            height: "120px",
+            overflow: "auto"
           }}
         >
           {jwtToken || "No token yet"}

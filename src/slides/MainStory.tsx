@@ -89,8 +89,7 @@ function Slide() {
         <section>
           <h4>
             Ako vas netko doda u Firebase projekt na kojem je uključen billing,
-             može kreirati{" "}
-            <a>bilo koji servis na Google Cloud Platformi !!!</a>
+            može kreirati <a>bilo koji servis na Google Cloud Platformi !!!</a>
           </h4>
           <img
             height="515"
@@ -160,7 +159,7 @@ function Slide() {
         </h3>
         <ul style={{ textAlign: "left" }}>
           <li>
-            Otvorio sam Jira ticket na poslu s zadatkom za implementaciju
+            Otvorio sam Jira ticket na poslu sa zadatkom za implementaciju
             Firebase registracije i login-a
           </li>
           <li>
@@ -181,7 +180,7 @@ function Slide() {
       </section>
 
       <section>
-        <h3 style={{ textAlign: "left" }}>Kratko pojašnjenje</h3>
+        <h3 style={{ textAlign: "left" }}>Firebase Javascript SDK</h3>
         <pre>
           <code
             data-line-numbers="5-7,3"
@@ -256,7 +255,7 @@ import { FirebaseApp, getApps, initializeApp } from "firebase/app";
       </section>
 
       <section>
-        <h3 style={{ textAlign: "left" }}>Pokušaj reprodukcije</h3>
+        <h3 style={{ textAlign: "left" }}>Pokušaj 1</h3>
         <ul style={{ textAlign: "left" }}>
           <li>Nikako da ponovo izazovem isti rezultat.</li>
           <li>Registriram se i registriram ponovo kad ono ništa.</li>
@@ -294,6 +293,10 @@ import { FirebaseApp, getApps, initializeApp } from "firebase/app";
           sam išta kliknuo. 🚩
         </SpeakerNotes>
       </section>
+      <section>
+        <h3>Jackpot!</h3>
+        
+      </section>
 
       <section>
         <h3 style={{ textAlign: "left" }}>
@@ -302,8 +305,8 @@ import { FirebaseApp, getApps, initializeApp } from "firebase/app";
         <ul style={{ textAlign: "left" }}>
           <li>Znamo da je do email scannera, ali kako to točno funkcionira?</li>
           <li>
-            Analizom maila primjetio sam da mail sadrži link za aktivaciju
-            računa.
+            U mailu sam primjetio da mail sadrži link za aktivaciju
+            računa koji izgleda ovako:
           </li>
         </ul>
         <pre>
@@ -331,22 +334,20 @@ Your x2bad00 team`}</code>
         </SpeakerNotes>
       </section>
 
-     <section>
-          <h4>
-            Ma mora biti do tog linka.
-          </h4>
-          <img
-            src="assets/firebase-hosted-ui-auth.png"
-            alt="Firebase UI"
-            style={{
-              marginRight: "50px",
-            }}
-          />
-          <SpeakerNotes>
-            Ovdje je ključna stvar da su usluge i dopuštenja ujedno povezane s
-            billing okolinom projekta.
-          </SpeakerNotes>
-        </section>
+      <section>
+        <h4>Ma mora biti do tog linka.</h4>
+        <img
+          src="assets/firebase-hosted-ui-auth.png"
+          alt="Firebase UI"
+          style={{
+            marginRight: "50px",
+          }}
+        />
+        <SpeakerNotes>
+          Ovdje je ključna stvar da su usluge i dopuštenja ujedno povezane s
+          billing okolinom projekta.
+        </SpeakerNotes>
+      </section>
 
       <section>
         <h3>Kako? Hosted UI on load via JS ili GET request?</h3>
@@ -357,21 +358,21 @@ Your x2bad00 team`}</code>
           <li>Mail scanner ga baš otvori onako dobro?</li>
         </ul>
         <SpeakerNotes>
-          Poslao sam verifikacijski link na svoj privatni mail, opalio manual curl -x GET
+          Poslao sam verifikacijski link na svoj privatni mail, opalio manual
+          curl -x GET
         </SpeakerNotes>
       </section>
 
-       <section>
+      <section>
         <h3>Meet the Microsoft Office 365 email scanner</h3>
-<img
-            src="assets/ms-defender-email-scanner.webp"
-            alt="Microsoft Office 365 email scanner"
-            style={{
-              marginRight: "50px",
-            }}
-          />
-       
-        
+        <img
+          src="assets/ms-defender-email-scanner.webp"
+          alt="Microsoft Office 365 email scanner"
+          style={{
+            marginRight: "50px",
+          }}
+        />
+
         <SpeakerNotes>
           Reprodukcija u kontroliranom okruženju ključna je kako bismo potvrdili
           uzrok bez utjecaja na stvarne korisnike.
@@ -381,15 +382,21 @@ Your x2bad00 team`}</code>
       <section>
         <h3>Procjena utjecaja i prijava problema Google-u</h3>
         <ul>
-          <li>Koje se akcije mogu dovršiti samo otvaranjem linka?</li>
-           - <a>Verifikacija emaila, otkazivanje MFA</a>
-            <br />
-          <li>Koje domene i tenanti su pogođeni?</li>
-          - <a>Svi Office 365 Business tenanti koji imaju omogućeno skeniranje emailova, i svi ostali</a>
-            <br />
-          <li>Koja je realna sposobnost napadača?</li>
-          - <a>ovisi o mašti, npr. moguće je čak enumerirati postojeće emailove na nekom tenantu, ali novi toolkit je tu, free provided by Google</a>
-            <br />
+          <li>Koje se akcije mogu dovršiti samo otvaranjem linka?</li>-{" "}
+          <a>Verifikacija emaila, otkazivanje MFA</a>
+          <br />
+          <li>Koje domene i tenanti su pogođeni?</li>-{" "}
+          <a>
+            Svi Office 365 Business tenanti koji imaju omogućeno skeniranje
+            emailova, i svi ostali koji imaju neku vrstu "modernog" skenera.
+          </a>
+          <br />
+          <li>Koja je realna sposobnost napadača?</li>-{" "}
+          <a>
+            Ovisi o mašti, npr. moguće je čak enumerirati postojeće emailove na
+            nekom tenantu, ali novi tool je tu, free, provided by Google
+          </a>
+          <br />
         </ul>
         <SpeakerNotes>
           Fokusiramo se na praktičan opseg, ne samo na teorijski utjecaj.
@@ -403,15 +410,20 @@ Your x2bad00 team`}</code>
           službeni proces, a rezultat <a>nagrade</a> je vidljiv na Google Bug
           Hunters platformi.
         </p>
-        <p>
-          <a
-            href="https://bughunters.google.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Google Bug Hunters rezultat
-          </a>
-        </p>
+        <a
+          href="https://bughunters.google.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            height="450"
+            src="assets/google-leaderboard-croatia.png"
+            alt="Google Bug Hunters leaderboard"
+            style={{
+              marginRight: "50px",
+            }}
+          />
+        </a>
         <SpeakerNotes>
           Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
           Niti jedna strana ne može sama popraviti cijeli ekosustav.
@@ -432,18 +444,108 @@ Your x2bad00 team`}</code>
         </SpeakerNotes>
       </section>
       <section>
-        <h2>Timeline</h2>
-        <ol>
-          <li>Initial discovery of the issue</li>
-          <li>Controlled reproduction of the problem</li>
-          <li>Impact assessment and reporting to Google</li>
-          <li>Responsible disclosure and coordination</li>
-          <li>Resolution and reward on Google Bug Hunters platform</li>
-        </ol>
-        <SpeakerNotes>
-          Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
-          Niti jedna strana ne može sama popraviti cijeli ekosustav.
-        </SpeakerNotes>
+        <section>
+          <h2>Timeline</h2>
+          <ul>
+            <li>
+              <a>24.03.2025.</a> - Prijava problema Google-u
+            </li>
+            <li>
+              <a>25.03.2025.</a> - Google bumps priority from P4 to P3/S4
+            </li>
+            <li>
+              <a>31.03.2025.</a> - Follow up with Google; "team is in process of
+              analyzing your report"
+            </li>
+            <li>
+              <a>14.04.2025.</a> - Bump from S4 to S3; "Product team will
+              evaluate your report"
+            </li>
+            <li>
+              <a>23.04.2025.</a> - VRP Panel has decided to issue a reward of{" "}
+              <a>$500.00</a>
+            </li>
+            <li>
+              <a>28.04.2025.</a> - Confirmation that the VRP Panel will review
+              the reward decision
+            </li>
+            <li>
+              <a>02.05.2025.</a> - Follow up "The VRP Panel is meeting twice a
+              week, and your report will be looked at in every meeting."
+            </li>
+            <li>
+              <a>14.05.2025.</a> - Closes another report with the same type of
+              attack as duplicate of this one (Removing MFA)
+            </li>
+          </ul>
+          <SpeakerNotes>
+            Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
+            Niti jedna strana ne može sama popraviti cijeli ekosustav.
+          </SpeakerNotes>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <a>14.05.2025.</a> - Google closes another report with the same
+              type of attack as duplicate of this one (Removing MFA)
+            </li>
+            <li>
+              <a>15.05.2025.</a> - Google bumps from P3 to P2
+            </li>
+            <li>
+              <a>15.05.2025.</a> - VRP Panel has decided to issue a reward of{" "}
+              <a>$2633.70</a>
+            </li>
+            <li>
+              <a>30.05.2025.</a> - Google confirms that the fix will be applied
+              in August 2025.
+            </li>
+            <li>
+              <a>05.06.2025.</a> - VRP Panel has decided to issue a reward of{" "}
+              <a>$4366.30</a>
+            </li>
+            <li>
+              <a style={{color: 'red'}}>01.09.2025.</a> - Retesting, vulnerability still present
+            </li>
+            <li>
+              <a style={{color: 'red'}}>03.10.2025.</a> - Retesting, vulnerability still present
+            </li>
+            <li>
+              <a style={{color: 'red'}}>01.11.2025.</a> - Retesting, vulnerability still present
+            </li>
+            <li>
+              <a>02.12.2025.</a> - Seems that the fix is applied, vulnerability
+              no longer present (or quirky test)
+            </li>
+          </ul>
+          <SpeakerNotes>
+            Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
+            Niti jedna strana ne može sama popraviti cijeli ekosustav.
+          </SpeakerNotes>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <a style={{color: 'red'}}>28.04.2026.</a> - Kolega s posla na drugom projektu na kojem se također koristi Firebase pokaže novi Jira ticket, "Email verification ne radi"
+            </li>
+            <li>
+              <a style={{color: 'red'}}>28.04.2026.</a> - Retesting, vulnerability still present
+            </li>
+            <li>
+              <a style={{color: 'red'}}>28.04.2026.</a> - Otvaram novi report prema Google-u.
+            </li>
+            <li>
+              <a style={{color: 'red'}}>04.07.2026.</a> - Closing report as duplicate, <a>another</a> security researcher already reported this issue.
+            </li>
+            <li>
+              <a style={{color: 'orange'}}>26.09.2026.</a> - I decided to go public, sharing the details of the vulnerability with the community.
+            </li>
+          </ul>
+          <SpeakerNotes>
+            Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
+            Niti jedna strana ne može sama popraviti cijeli ekosustav.
+          </SpeakerNotes>
+        </section>
       </section>
     </>
   );
