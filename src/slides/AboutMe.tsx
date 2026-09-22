@@ -31,10 +31,19 @@ function Slide() {
         </div>
         <div style={{ textAlign: "left", maxWidth: "75%" }}>
           <p>
-            <strong>Ime:</strong> Gordan <a style={{
-          transform: 'rotate(20deg)',
-          display: 'inline-block'
-        }}>N</a>ekić
+            <strong>Ime:</strong> Gordan <a 
+            style={{
+              transform: 'rotate(15deg)',
+              display: 'inline-block',
+              transition: 'transform 0.25s ease',
+            }}
+            onMouseEnter={(event) => {
+              event.currentTarget.style.transform = 'rotate(90deg)';
+            }}
+            onMouseLeave={(event) => {
+              event.currentTarget.style.transform = 'rotate(15deg)';
+            }}
+            >N</a>ekić
           </p>
           <p>
             <strong>Rola:</strong> Lead Engineer @ Elixirr Digital

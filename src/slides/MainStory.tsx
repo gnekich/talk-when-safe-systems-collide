@@ -89,7 +89,7 @@ function Slide() {
         <section>
           <h4>
             Ako vas netko doda u Firebase projekt na kojem je uključen billing,
-            on može kreirati{" "}
+             može kreirati{" "}
             <a>bilo koji servis na Google Cloud Platformi !!!</a>
           </h4>
           <img
@@ -349,13 +349,29 @@ Your x2bad00 team`}</code>
         </section>
 
       <section>
-        <h3>Jel' hosted UI on load via JS ili GET request?</h3>
+        <h3>Kako? Hosted UI on load via JS ili GET request?</h3>
         <ul>
-          <li>Napravite kontrolirani testni tenant</li>
-          <li>Omogućite skeniranje sigurnosnih linkova</li>
-          <li>Pošaljite GIS/Firebase link za akciju</li>
-          <li>Promatrajte automatsko dovršavanje</li>
+          <li>Poslao sam verifikacijski link na svoj privatni mail</li>
+          <li>Manual curl -X GET</li>
+          <li>Ok znači do učitavanja browsera s aktivnim JS-om?</li>
+          <li>Mail scanner ga baš otvori onako dobro?</li>
         </ul>
+        <SpeakerNotes>
+          Poslao sam verifikacijski link na svoj privatni mail, opalio manual curl -x GET
+        </SpeakerNotes>
+      </section>
+
+       <section>
+        <h3>Meet the Microsoft Office 365 email scanner</h3>
+<img
+            src="assets/ms-defender-email-scanner.webp"
+            alt="Microsoft Office 365 email scanner"
+            style={{
+              marginRight: "50px",
+            }}
+          />
+       
+        
         <SpeakerNotes>
           Reprodukcija u kontroliranom okruženju ključna je kako bismo potvrdili
           uzrok bez utjecaja na stvarne korisnike.
@@ -366,8 +382,14 @@ Your x2bad00 team`}</code>
         <h3>Procjena utjecaja i prijava problema Google-u</h3>
         <ul>
           <li>Koje se akcije mogu dovršiti samo otvaranjem linka?</li>
+           - <a>Verifikacija emaila, otkazivanje MFA</a>
+            <br />
           <li>Koje domene i tenanti su pogođeni?</li>
+          - <a>Svi Office 365 Business tenanti koji imaju omogućeno skeniranje emailova, i svi ostali</a>
+            <br />
           <li>Koja je realna sposobnost napadača?</li>
+          - <a>ovisi o mašti, npr. moguće je čak enumerirati postojeće emailove na nekom tenantu, ali novi toolkit je tu, free provided by Google</a>
+            <br />
         </ul>
         <SpeakerNotes>
           Fokusiramo se na praktičan opseg, ne samo na teorijski utjecaj.
@@ -390,6 +412,34 @@ Your x2bad00 team`}</code>
             Google Bug Hunters rezultat
           </a>
         </p>
+        <SpeakerNotes>
+          Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
+          Niti jedna strana ne može sama popraviti cijeli ekosustav.
+        </SpeakerNotes>
+      </section>
+      <section>
+        <h2>The End ?</h2>
+        <SpeakerNotes>
+          Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
+          Niti jedna strana ne može sama popraviti cijeli ekosustav.
+        </SpeakerNotes>
+      </section>
+      <section>
+        <h2>Nope...</h2>
+        <SpeakerNotes>
+          Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
+          Niti jedna strana ne može sama popraviti cijeli ekosustav.
+        </SpeakerNotes>
+      </section>
+      <section>
+        <h2>Timeline</h2>
+        <ol>
+          <li>Initial discovery of the issue</li>
+          <li>Controlled reproduction of the problem</li>
+          <li>Impact assessment and reporting to Google</li>
+          <li>Responsible disclosure and coordination</li>
+          <li>Resolution and reward on Google Bug Hunters platform</li>
+        </ol>
         <SpeakerNotes>
           Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
           Niti jedna strana ne može sama popraviti cijeli ekosustav.

@@ -38,7 +38,7 @@ function Slide() {
             dogodi)
           </li>
 
-          <li>Pronaći/izraditi fix. (Kojeg već danas možemo implementirati)</li>
+          <li>Pronaći i izraditi fix. (Kojeg već danas možemo implementirati)</li>
 
           <li>Zapaliti iskru rasprave oko relativno nove klase napada. (Jesu li agenti koji imaju pristup mailu novi scanneri?)</li>
 
@@ -49,8 +49,8 @@ function Slide() {
           <li>???</li>
 
           <li>
-            <a>Hack</a> the planet! (Live demo of the {daysSinceReport}-day vulnerability
-            in prod)
+            <a>Hack the planet!</a>  Let's do a Live demo of the {daysSinceReport}-day vulnerability
+            in GCP production. (Zero click authentication bypass)
           </li>
         </ol>
         <SpeakerNotes>

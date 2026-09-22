@@ -7,7 +7,7 @@ function Slide() {
        <section>
         <h3>
           <a>
-            <PasswordGlitchTypeEffectText>
+            <PasswordGlitchTypeEffectText reanimateEveryMs={7000} toReanimateChildren={'Welcome to'}>
                0x2BAD
             </PasswordGlitchTypeEffectText>
           </a>
@@ -15,7 +15,7 @@ function Slide() {
         <h3>
           When Safe Systems{" "}
           <a>
-            <PasswordGlitchTypeEffectText>
+            <PasswordGlitchTypeEffectText reanimateEveryMs={5000} toReanimateChildren={'Break'}>
               Collide
             </PasswordGlitchTypeEffectText>
           </a>
@@ -37,10 +37,25 @@ function Slide() {
             </PasswordGlitchTypeEffectText>
           </a>
         </h3>
-        <h4>Antoniu <a style={{
-          transform: 'rotate(20deg)',
-          display: 'inline-block'
-        }}>Z</a>ekiću na organizaciji ovog eventa. ... i za veliku pomoć pri pregovorima oko iznosa nagrade od strane Google Cloud VRP team-a.</h4>
+        <h4>
+          Antoniu{' '}
+          <a
+            style={{
+              transform: 'rotate(15deg)',
+              display: 'inline-block',
+              transition: 'transform 0.25s ease',
+            }}
+            onMouseEnter={(event) => {
+              event.currentTarget.style.transform = 'rotate(90deg)';
+            }}
+            onMouseLeave={(event) => {
+              event.currentTarget.style.transform = 'rotate(15deg)';
+            }}
+          >
+            Z
+          </a>
+          ekiću na organizaciji ovog eventa. ... i za veliku pomoć pri pregovorima oko iznosa nagrade od strane Google Cloud VRP team-a.
+        </h4>
         <div style={{
           marginBottom: "150px"
         }}></div>
