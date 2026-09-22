@@ -20,11 +20,11 @@ import "./App.css";
 import IntroSlide from "./slides/Intro";
 import CompanySlide from "./slides/Company";
 import AboutMeSlide from "./slides/AboutMe";
-import MetaCTFSlide from "./slides/MetaCTF";
+import MainStory from "./slides/MainStory";
 import WhatIsCTFSlide from "./slides/WhatIsCTF";
 import WhatWillYouEncounterSlide from "./slides/WhatWillYouEncounter";
 import WhenWeBecomeGoodAtItSlide from "./slides/WhenWeBecomeGoodAtIt";
-import ConclusionCTFSlide from "./slides/ConclusionCTF";
+import Zakljucak from "./slides/Zakljucak";
 import UsefulLinksSlide from "./slides/UsefulLinks";
 import DemoSlide from "./slides/Demo";
 import Goals from "./slides/Goals";
@@ -77,13 +77,13 @@ function App() {
         <AboutMeSlide />
         <Goals />
         {/* <CompanySlide /> */}
-        <MetaCTFSlide />
+        <MainStory />
         <WhatIsCTFSlide />
         <WhatWillYouEncounterSlide />
         <DemoSlide />
         <WhenWeBecomeGoodAtItSlide />
         <UsefulLinksSlide />
-        <ConclusionCTFSlide />
+        <Zakljucak />
       </div>
     </div>
   );

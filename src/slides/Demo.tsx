@@ -1,3 +1,4 @@
+import FirebaseAuthDemo from "../components/FirebaseAuthDemo";
 import SpeakerNotes from "../components/SpeakerNotes";
 
 function Slide() {
@@ -5,41 +6,43 @@ function Slide() {
     <>
       <section>
         <section>
-          <h2>Walkthrough (high-level)</h2>
-          <p>No exploit details — just the sequence of events.</p>
+          <h2>PoC: registracija, login i logout</h2>
+          <p>Prikaz kako skener e-pošte može automatski dovršiti potvrdu korisnika.</p>
         </section>
+
         <section>
-          <h2>Sequence</h2>
+          <h2>Redoslijed</h2>
           <ol>
-            <li>System sends an action email</li>
-            <li>Scanner opens the link for safety</li>
-            <li>Self-hosted UI validates the token</li>
-            <li>Action completes without user click</li>
+            <li>Korisnik se registrira / prijavi</li>
+            <li>Poslan je e-mail za potvrdu</li>
+            <li>Skenirajuci link otvara URL bez korisničke interakcije</li>
+            <li>U sučelju se prikazuje status verifikacije i JWT token</li>
           </ol>
           <SpeakerNotes>
-            Keep this simple. No payloads or exploitation steps.
+            Korisnik ne mora kliknuti ni potvrditi ništa. Samo otvaranje linka može
+            dovesti do toga da se korisnički status pretvori u potvrđen.
           </SpeakerNotes>
         </section>
+
         <section>
-          <h2>Decision points</h2>
-          <ul>
-            <li>Should “open” be enough to “commit”?</li>
-            <li>Should we require a second step?</li>
-            <li>How do we detect automation?</li>
-          </ul>
+          <h2>Demo</h2>
+          <FirebaseAuthDemo />
           <SpeakerNotes>
-            This is where design choices turn into security outcomes.
+            Ovdje demonstriramo stvarni tok registracije, prijave i logouta, te
+            prikazujemo status verifikacije i JWT token na desnoj strani.
           </SpeakerNotes>
         </section>
+
         <section>
-          <h2>Safer patterns</h2>
+          <h2>Zašto je ovo opasno?</h2>
           <ul>
-            <li>Landing page → explicit confirmation</li>
-            <li>Short-lived tokens + user presence checks</li>
-            <li>Token use bound to session, not just URL</li>
+            <li>“Otvaranje linka” se tretira kao potvrda namjere</li>
+            <li>Autonomni skeneri ne predstavljaju stvarnog korisnika</li>
+            <li>Tokeni i status verifikacije se mogu koristiti bez eksplicitnog klika</li>
           </ul>
           <SpeakerNotes>
-            These reduce accidental completion by scanners.
+            Ovo je ključna lekcija: sigurnosni mehanizmi moraju razlikovati
+            automatizaciju od stvarne korisničke namjere.
           </SpeakerNotes>
         </section>
       </section>

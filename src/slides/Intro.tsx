@@ -26,8 +26,7 @@ function Slide() {
         }}></div>
 
         <SpeakerNotes>
-          In this section, we will explore a specific case where Firebase Auth can be bypassed using email scanners.
-          We will examine how the interaction between seemingly secure systems can lead to unexpected vulnerabilities.
+          Pozdrav svima, drago mi je što vas mogu pozdraviti na ovom predavanju.
         </SpeakerNotes>
       </section>
       <section>
@@ -41,16 +40,17 @@ function Slide() {
         <h4>Antoniu <a style={{
           transform: 'rotate(20deg)',
           display: 'inline-block'
-        }}>Z</a>ekiću na organizaciji ovog eventa, te pomoć pri pregovorima oko iznosa nagrade od strane Cloud VDP Google-a.</h4>
+        }}>Z</a>ekiću na organizaciji ovog eventa. ... i za veliku pomoć pri pregovorima oko iznosa nagrade od strane Google Cloud VRP team-a.</h4>
         <div style={{
           marginBottom: "150px"
         }}></div>
 
         <SpeakerNotes>
-          Prvo bi se zahvalio prijatelju Antoniu Zekiću na organizaciji ovog eventa, te pomoć pri pregovorima oko iznosa nagrade od strane Cloud VDP Google-a. (Više o tome u nastavku) i ono bitno, da nije bilo nejgove incijative ove prezentacije najvjerojatnije ne bi ni bilo.
+          Prvo bi se zahvalio prijatelju Antoniu Zekiću na organizaciji ovog eventa, i za pomoć pri pregovorima oko iznosa nagrade od strane Google Cloud VRP. (Više o tome u nastavku) i ono bitno, da nije bilo nejgove incijative ove prezentacije najvjerojatnije ne bi ni bilo.
+          Also možda skužite jedan mali easter egg što se dogodi ako rotirate slovo "Z".
         </SpeakerNotes>
       </section>
-      <section>
+      {/* <section>
         <h2>
           <a>Dva</a> pitanja na koja ćemo probati odgovoriti
         </h2>
@@ -61,9 +61,9 @@ function Slide() {
           <li>Kada sustavi međusobno komuniciraju, tko snosi rizik?</li>
         </ol>
         <SpeakerNotes>
-          
+          Ovdje ćemo pokušati odgovoriti na dva ključna pitanja vezana uz sigurnost sustava i interakciju između njih.
         </SpeakerNotes>
-      </section>
+      </section> */}
     </section>
   );
 }

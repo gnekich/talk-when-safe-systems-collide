@@ -3,7 +3,7 @@ import SpeakerNotes from "../components/SpeakerNotes";
 function Slide() {
   return (
     <section>
-      <h2>
+      <h2 style={{ textAlign: 'left'}}>
         <a>$</a> whoami
       </h2>
       <div
@@ -31,20 +31,20 @@ function Slide() {
         </div>
         <div style={{ textAlign: "left", maxWidth: "75%" }}>
           <p>
-            <strong>Name:</strong> Gordan <a style={{
+            <strong>Ime:</strong> Gordan <a style={{
           transform: 'rotate(20deg)',
           display: 'inline-block'
         }}>N</a>ekić
           </p>
           <p>
-            <strong>Role:</strong> Lead Engineer @ Elixirr Digital
+            <strong>Rola:</strong> Lead Engineer @ Elixirr Digital
           </p>
           <p>
-            <strong>Description:</strong> Programmer, security enthusiast,
-            advocate for a free and secure internet. I ❤️ Open Source.
+            <strong>Opis:</strong> Programer, security entuzijast,
+            zagovornik slobodnog i sigurnog interneta. I obožavam Open Source.
           </p>
           <p>
-            <strong>Online Presence:</strong>
+            <strong>Online prisutnost:</strong>
           </p>
           <ul style={{ padding: "0" }}>
             <li>
@@ -69,7 +69,7 @@ function Slide() {
             </li>
             <li>
               <a href="https://gordan.neki.ch" target="_blank">
-                Web
+                Web (gordan.neki.ch)
               </a>
             </li>
           </ul>
@@ -80,7 +80,7 @@ function Slide() {
         Engineer at Elixirr Digital.
         <br />
         <br />
-        I am a programmer with a great passion for computer security and an
+        I am a programer with a great passion for computer security and an
         advocate for a free and secure internet.
         <br />
         <br />

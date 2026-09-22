@@ -4,34 +4,34 @@ function Slide() {
   return (
     <>
       <section>
-        <h2>Firebase & GIS: a quick primer</h2>
+        <h2>Firebase i GIS: kratki pregled</h2>
         <p>
-          Firebase Auth and Google Identity Service help apps manage user
-          identities and account actions.
+          Firebase Auth i Google Identity Service pomažu aplikacijama upravljati
+          identitetima korisnika i akcijama na računu.
         </p>
         <ul>
-          <li>Login and account linking</li>
-          <li>Email verification</li>
-          <li>Consent and account actions</li>
+          <li>Prijava i povezivanje računa</li>
+          <li>Verifikacija e-pošte</li>
+          <li>Pristanak i akcije na računu</li>
         </ul>
         <SpeakerNotes>
-          We only need a lightweight understanding of the identity flow to
-          follow the case.
+          Dovoljno nam je osnovno razumijevanje identitetnog toka da bismo
+          pratili slučaj.
         </SpeakerNotes>
       </section>
 
       <section>
-        <h2>Action links</h2>
+        <h2>Akcijski linkovi</h2>
         <p>
-          Many workflows are completed by a user clicking a link in an email.
+          Mnogi obrasci završavaju kada korisnik klikne link u e-pošti.
         </p>
         <ul>
-          <li>Link encodes a one-time action token</li>
-          <li>UI validates the token and completes the action</li>
-          <li>Expectation: only the user triggers it</li>
+          <li>Link sadrži jedinstveni token za jednu akciju</li>
+          <li>UI validira token i dovršava akciju</li>
+          <li>Očekivanje: akciju pokreće samo korisnik</li>
         </ul>
         <SpeakerNotes>
-          The key point: the action is triggered by a link open.
+          Ključna stvar: akcija se pokreće otvaranjem linka.
         </SpeakerNotes>
       </section>
 
@@ -39,30 +39,30 @@ function Slide() {
         <section>
           <h2>Self-hosted UI</h2>
           <p>
-            The app hosts its own UI while relying on Firebase/GIS for token
-            validation.
+            Aplikacija hosta vlastito sučelje, dok se Firebase/GIS koriste za
+            validaciju tokena.
           </p>
           <ul>
-            <li>Frontend receives a token via URL</li>
-            <li>Backend verifies and completes the action</li>
-            <li>User expects an explicit click</li>
+            <li>Frontend prima token preko URL-a</li>
+            <li>Backend verificira i završava akciju</li>
+            <li>Korisnik očekuje eksplicitni klik</li>
           </ul>
           <SpeakerNotes>
-            The UI is not the identity provider itself; it’s a consumer that
-            expects a human user.
+            UI nije sam identitetni pružatelj; to je konzument koji očekuje
+            ljudskog korisnika.
           </SpeakerNotes>
         </section>
         <section>
-          <h2>Where it gets risky</h2>
-          <p>Automated scanners behave like users, but without user intent.</p>
+          <h2>Gdje postaje opasno</h2>
+          <p>Automatizirani skeneri ponašaju se kao korisnici, ali bez namjere.</p>
           <ul>
-            <li>They open links to check safety</li>
-            <li>They can follow redirects and load UIs</li>
-            <li>They may trigger state-changing flows</li>
+            <li>Otvaraju linkove kako bi provjerili sigurnost</li>
+            <li>Mogu pratiti redirecte i učitavati sučelja</li>
+            <li>Mogu pokrenuti tokove koji mijenjaju stanje</li>
           </ul>
           <SpeakerNotes>
-            The UI cannot easily tell scanner vs. user unless it explicitly
-            checks.
+            UI teško razlikuje skener od korisnika osim ako to eksplicitno
+            provjeri.
           </SpeakerNotes>
         </section>
       </section>
