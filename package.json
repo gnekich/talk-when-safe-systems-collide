@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build-gh-pages": "vite build --base=/talk-when-security-measures-backfire/ --outDir=dist && npm run copy-index-to-404",
+    "build-gh-pages": "vite build --base=/talk-when-safe-systems-collide/ --outDir=dist && npm run copy-index-to-404",
     "copy-index-to-404": "cp dist/index.html dist/404.html"
   },
   "dependencies": {

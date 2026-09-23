@@ -73,7 +73,7 @@ function Slide() {
           NAME
         </h3>
         <p style={{ textAlign: "left" }}>
-          talk-when-security-measures-backfire [OPTIONS]... {'{firebase-public-credentials.json}'}
+          talk-when-safe-systems-collide [OPTIONS]... {'{firebase-public-credentials.json}'}
         </p>
         <h3 style={{ textAlign: "left" }}>
           SYNOPSIS
@@ -86,7 +86,7 @@ function Slide() {
         </h3>
         <p style={{ textAlign: "left" }}>
           Prezentacija je potpuno interaktivna i kreirana u web tehnologijama.
-          Potpuno je Open Source i možete pregledati izvorni kod na <a href="https://github.com/gnekich/talk-when-security-measures-backfire">GitHub-u</a>. Oh da i sadrži live demo, PoC ranjivosti :)
+          Potpuno je Open Source i možete pregledati izvorni kod na <a href="https://github.com/gnekich/talk-when-safe-systems-collide">GitHub-u</a>. Oh da i sadrži live demo, PoC ranjivosti :)
         </p>
         <SpeakerNotes>
           
