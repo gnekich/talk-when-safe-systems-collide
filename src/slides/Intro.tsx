@@ -26,7 +26,17 @@ function Slide() {
         }}></div>
 
         <SpeakerNotes>
-          Pozdrav svima, drago mi je što vas mogu pozdraviti na ovom predavanju.
+          Pozdrav svima, dobrodošli na prezentaciju "When Safe Systems Break".
+
+
+
+          Pripremio sam ovu prezentaciju kako bih podijelio jednu svoju priču iz svijeta sigurnosti.
+          Ova priča uključuje zanimljive sigurnosne propuste i lekcije koje sam naučio.
+          
+          - Ništa posebno.
+          - Dolazim iz web svijeta i web exploitacije
+
+          - Nadam se da će vam se svidjeti i biti zanimljivo.
         </SpeakerNotes>
       </section>
       <section>
@@ -61,8 +71,13 @@ function Slide() {
         }}></div>
 
         <SpeakerNotes>
-          Prvo bi se zahvalio prijatelju Antoniu Zekiću na organizaciji ovog eventa, i za pomoć pri pregovorima oko iznosa nagrade od strane Google Cloud VRP. (Više o tome u nastavku) i ono bitno, da nije bilo nejgove incijative ove prezentacije najvjerojatnije ne bi ni bilo.
+          Pa prije nego što krenemo, želim se zahvaliti svima koji su pomogli u organizaciji ovog eventa i podržali ovu prezentaciju.
+
+          Pogotovo prijatelju Antoniu Zekiću na organizaciji ovog eventa, i za pomoć pri pregovorima oko iznosa nagrade od strane Google Cloud VRP. (Više o tome u samoj prezentaciji) i ono bitno,
+          da nije bilo nejgove incijative ove prezentacije najvjerojatnije ne bi ni bilo.
+
           Also možda skužite jedan mali easter egg što se dogodi ako rotirate slovo "Z".
+          Zaručnica mi kaže da ko Halland hodam svijetom nediagnosticiran.
         </SpeakerNotes>
       </section>
       {/* <section>

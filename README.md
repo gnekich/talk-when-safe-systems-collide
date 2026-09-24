@@ -4,9 +4,13 @@
 - Date: 2026-09-26
 - Author: Gordan Nekić
 
+## Online demo
+
+You can check the deployed [talk presentation](https://gordan.neki.ch/talk-when-safe-systems-collide/) as the online demo.
+
 ## Details
 
-This repository contains the presentation for the ~[BSides Zagreb 2026](https://www.bsideszagreb.com/)~ [0x2BAD Zagreb 2026](#) conference, as part of the talk "When Safe Systems Collide"
+This repository contains the presentation for the [0x2BAD Zagreb 2026](#) conference, as part of the talk "When Safe Systems Collide"
 
 ## Misc
 

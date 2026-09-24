@@ -1,4 +1,5 @@
 import SpeakerNotes from "../components/SpeakerNotes";
+import { PRESENTATION_SOURCE_CODE_URL } from "../config";
 
 function getDaysSinceReport() {
   const reportDate = new Date("2025-03-24T00:00:00");
@@ -31,16 +32,15 @@ function Slide() {
             Vidjeti kako bi ti servisi trebali funkcionirati.
           </li>
 
-          <li>Kako ti servisi zapravo funkcioniraju.</li>
+          <li>Kako ti servisi zaista funkcioniraju.</li>
 
           <li>
-            Definirati uzrok problema, tko je zapravo kriv? (Kad se ovako nešto
-            dogodi)
+            Definirati uzrok problema, tko je zapravo kriv?
           </li>
 
-          <li>Pronaći i izraditi fix. (Kojeg već danas možemo implementirati)</li>
+          <li>Pronaći i izraditi fix.</li>
 
-          <li>Zapaliti iskru rasprave oko relativno nove klase napada. (Jesu li agenti koji imaju pristup mailu novi scanneri?)</li>
+          <li>Zagolicati maštu oko relativno nove klase napada.<br/>(Jesu li agenti koji imaju pristup mailu još gori ili su to novi scanneri?)</li>
 
           <li>
             Naučiti svašta nešto novo iz mog iskustva u prijavi ovog problema.
@@ -49,8 +49,8 @@ function Slide() {
           <li>???</li>
 
           <li>
-            <a>Hack the planet!</a>  Let's do a Live demo of the {daysSinceReport}-day vulnerability
-            in GCP production. (Zero click authentication verification bypass)
+            <a>Hack the planet!</a> We'll do a live demo of the <a style={{ color: "red" }}> {daysSinceReport}-day</a> vulnerability
+            in GCP production that is <a>"fixed"</a>. (Zero click authentication verification bypass)
           </li>
         </ol>
         <SpeakerNotes>
@@ -79,14 +79,15 @@ function Slide() {
           SYNOPSIS
         </h3>
         <p style={{ textAlign: "left" }}>
-          Ova prezentacija ima za cilj prikazati sigurnosne propuste Google Cloud Platforme.
+          Ova prezentacija ima za cilj prikazati sigurnosne propuste Google Cloud Platforme, posebno u kontekstu Firebase servisa.
         </p>
         <h3 style={{ textAlign: "left" }}>
           DESCRIPTION
         </h3>
         <p style={{ textAlign: "left" }}>
-          Prezentacija je potpuno interaktivna i kreirana u web tehnologijama.
-          Potpuno je Open Source i možete pregledati izvorni kod na <a href="https://github.com/gnekich/talk-when-safe-systems-collide">GitHub-u</a>. Oh da i sadrži live demo, PoC ranjivosti :)
+          Prezentacija je potpuno interaktivna i kreirana pomoću Reveal.js-a.<br />
+          Potpuno je Open Source i možete pregledati izvorni kod na <a href={`${PRESENTATION_SOURCE_CODE_URL}`}>GitHub-u</a>.
+          <br />Oh da i sadrži live demo, PoC ranjivosti :)
         </p>
         <SpeakerNotes>
           

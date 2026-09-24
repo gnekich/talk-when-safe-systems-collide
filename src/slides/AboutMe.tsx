@@ -50,7 +50,7 @@ function Slide() {
           </p>
           <p>
             <strong>Opis:</strong> Programer, security entuzijast,
-            zagovornik slobodnog i sigurnog interneta. I obožavam Open Source.
+            zagovornik slobodnog i sigurnog interneta za sve, obožavam Open Source, and my crime is that of curiosity.
           </p>
           <p>
             <strong>Online prisutnost:</strong>

@@ -1,17 +1,21 @@
 import FirebaseAuthDemo from "../components/FirebaseAuthDemo";
 import SpeakerNotes from "../components/SpeakerNotes";
+import PasswordGlitchTypeEffectText from "../components/CyberpunkPasswordEffect";
 
 function Slide() {
   return (
     <>
       <section>
         <section>
-          <h2>PoC: registracija, login i logout</h2>
-          <p>Hack the planet!</p>
+          <h2><a><PasswordGlitchTypeEffectText reanimateEveryMs={5000} toReanimateChildren={'Demo'}>
+                         Hack the planet!
+                      </PasswordGlitchTypeEffectText></a></h2>
+          <p>PoC: Registration, login, logout, verification bypass</p>
         </section>
 
       <section>
           <h2>Demo Gods have mercy!</h2>
+          <p>- every DEFCON since 1993</p>
         </section>
 
         <section>

@@ -11,7 +11,15 @@ function Slide() {
       <section>
         <h3>Što je Firebase?</h3>
         <img src="assets/firebase.png" alt="Firebase screenshot" style={{}} />
-        <SpeakerNotes>Prvo kratko ćemo objasniti što je Firebase.</SpeakerNotes>
+        <a href="https://console.firebase.google.com/" target="_blank">
+          https://console.firebase.google.com/
+        </a>
+        <SpeakerNotes>
+          - Firebase je platforma koju pruža Google za razvoj mobilnih i web
+          aplikacija.
+          <br />- Skup cloud servisa, uključujući autentikaciju, bazu podataka,
+          hosting i analitiku.
+        </SpeakerNotes>
       </section>
 
       <section>
@@ -22,8 +30,23 @@ function Slide() {
             alt="Firebase Authentication screenshot"
             style={{}}
           />
+          <a
+            href="https://console.firebase.google.com/project/x2bad00/authentication/users"
+            target="_blank"
+          >
+            https://console.firebase.google.com/project/x2bad00/authentication/users
+          </a>
           <SpeakerNotes>
-            Prvo kratko ćemo objasniti što je Firebase Authentication.
+            - Firebase Authentication je servis unutar Firebase platforme.
+            <br />
+            - Omogućava autentikaciju korisnika u mobilnim i web aplikacijama.
+            <br />
+            - Integrira se s različitim metodama autentikacije, uključujući
+            email, lozinke, društvene mreže i anonimnu autentikaciju.
+            <br />
+            - Ali ono bitno je za naglasiti to je pod servis Firebase platforme.
+            Iako Google gura to ime ispred svakog servisa.
+            <br />
           </SpeakerNotes>
         </section>
         <section>
@@ -69,7 +92,17 @@ function Slide() {
             />
           </div>
           <SpeakerNotes>
-            Prvo kratko ćemo objasniti što je Firebase Authentication.
+            - Što je zaista Firebase i Firebase Authentication.
+            <br />
+            - Pa to nam najbolje ilustriraju ovi memeovi.
+            <br />
+            - Firebase je zapravo GCP.
+            <br />
+            - Firebase Authentication je zapravo Identity Platform.
+            <br />
+            - E sad sve je to super... ali ovdje možda nekima već spidey sense
+            signalira da nešto nije u redu.
+            <br />
           </SpeakerNotes>
         </section>
         <section>
@@ -80,7 +113,7 @@ function Slide() {
             style={{}}
           />
           <SpeakerNotes>
-            Kretat ćemo kronološki. Svaka faza ima svoje lekcije.
+            - Ja kad sam ovo prvi put vidio bio sam ko Mojmira "Mooolim?".
           </SpeakerNotes>
         </section>
       </section>
@@ -100,8 +133,13 @@ function Slide() {
             }}
           />
           <SpeakerNotes>
-            Ovdje je ključna stvar da su usluge i dopuštenja ujedno povezane s
+            - Ovdje je ključna stvar da su usluge i dopuštenja ujedno povezane s
             billing okolinom projekta.
+            <br />
+            - Jer ja sam kolegu bio dodao u Firebase projekt jednom davno i išao
+            sam nešto provjeriti, da moj kolega je Owner na mom GCP-u na kojem
+            imam billing!!!
+            <br />- Firebase 2012 (~15 god)
           </SpeakerNotes>
         </section>
         <section>
@@ -141,6 +179,8 @@ function Slide() {
         <h2>Jako, jako puno developera!</h2>
         <p>
           Firebase je jako korišten među developerima zbog svoje jednostavnosti.
+          <br />
+          (pogotovo Android developeri)
         </p>
 
         <SpeakerNotes>
@@ -155,7 +195,7 @@ function Slide() {
 
       <section>
         <h3 style={{ textAlign: "left" }}>
-          Chapter 1: <a>Otkriće</a>
+          Story Chapter 1: <a>Otkriće</a>
         </h3>
         <ul style={{ textAlign: "left" }}>
           <li>
@@ -284,7 +324,9 @@ import { FirebaseApp, getApps, initializeApp } from "firebase/app";
             njegovom mailu, bam i njega je automatski verificiralo. 🚩
           </li>
           <li>..okej što mi svi imamo skupa a moj privatni mail nema</li>
-          <li>hey imate vi možda aktiviran email scanner? -da</li>
+          <li>
+            imate vi možda aktiviran email scanner? <a>-da</a>
+          </li>
         </ul>
         <p style={{ textAlign: "left" }}></p>
         <SpeakerNotes>
@@ -295,18 +337,17 @@ import { FirebaseApp, getApps, initializeApp } from "firebase/app";
       </section>
       <section>
         <h3>Jackpot!</h3>
-        
       </section>
 
       <section>
         <h3 style={{ textAlign: "left" }}>
-          Chapter 2: <a>Ali zašto???</a>
+          Story Chapter 2: <a>Ali kako???</a>
         </h3>
         <ul style={{ textAlign: "left" }}>
           <li>Znamo da je do email scannera, ali kako to točno funkcionira?</li>
           <li>
-            U mailu sam primjetio da mail sadrži link za aktivaciju
-            računa koji izgleda ovako:
+            U mailu sam primjetio da mail sadrži link za aktivaciju računa koji
+            izgleda ovako:
           </li>
         </ul>
         <pre>
@@ -327,6 +368,9 @@ Thanks,
 
 Your x2bad00 team`}</code>
         </pre>
+        <ul style={{ textAlign: "left", width: "100%" }}>
+          <li>Firebase hosted UI?</li>
+        </ul>
         <SpeakerNotes>
           Prilikom implementacije firebase registracije i login-a uočio sam da
           je moj račun aktiviran (email verificiran) nakon registracije bez da
@@ -350,16 +394,20 @@ Your x2bad00 team`}</code>
       </section>
 
       <section>
-        <h3>Kako? Hosted UI on load via JS ili GET request?</h3>
+        <h4>
+          Hmm? <a>GET request</a> ili Hosted UI <a>DOMContentLoaded via JS</a>?
+        </h4>
         <ul>
           <li>Poslao sam verifikacijski link na svoj privatni mail</li>
-          <li>Manual curl -X GET</li>
-          <li>Ok znači do učitavanja browsera s aktivnim JS-om?</li>
-          <li>Mail scanner ga baš otvori onako dobro?</li>
+          <li>Kopirao link i probao curl -X GET $LINK</li>
+          <li>
+            Ok znači do učitavanja nekakvog skenera/browsera s aktivnim JS-om?
+          </li>
+          <li>Mail scanner ga baš onako "dobro" otvori? Koliko "dobro"?</li>
         </ul>
         <SpeakerNotes>
           Poslao sam verifikacijski link na svoj privatni mail, opalio manual
-          curl -x GET
+          curl -X GET $LINK
         </SpeakerNotes>
       </section>
 
@@ -383,7 +431,7 @@ Your x2bad00 team`}</code>
         <h3>Procjena utjecaja i prijava problema Google-u</h3>
         <ul>
           <li>Koje se akcije mogu dovršiti samo otvaranjem linka?</li>-{" "}
-          <a>Verifikacija emaila, otkazivanje MFA</a>
+          <a>Verifikacija emaila, otkazivanje MFA, etc.</a>
           <br />
           <li>Koje domene i tenanti su pogođeni?</li>-{" "}
           <a>
@@ -393,9 +441,10 @@ Your x2bad00 team`}</code>
           <br />
           <li>Koja je realna sposobnost napadača?</li>-{" "}
           <a>
-            Ovisi o mašti, npr. moguće je čak enumerirati postojeće emailove na
-            nekom tenantu, ali novi tool je tu, free, provided by Google
-          </a>
+            Ovisi o mašti, potpuni verification bypass, MFA revoke, etc., npr. moguće je čak
+            enumerirati postojeće emailove na nekom tenantu.
+          </a>{" "}
+          Novi hacking tool je tu, free, provided by Google, thx.
           <br />
         </ul>
         <SpeakerNotes>
@@ -444,106 +493,146 @@ Your x2bad00 team`}</code>
         </SpeakerNotes>
       </section>
       <section>
+         <img
+            height="450"
+            src="assets/github-profile-nightmare-eclipse.webp"
+            alt="GitHub profile nightmare-eclipse"
+            style={{
+              marginRight: "50px",
+            }}
+          />
+        <SpeakerNotes>
+          Tko zna zna...
+        </SpeakerNotes>
+      </section>
+      <section>
         <section>
           <h2>Timeline</h2>
           <ul>
             <li>
-              <a>24.03.2025.</a> - Prijava problema Google-u
+              <a>2025-03-24</a> - Reported the issue to Google
             </li>
             <li>
-              <a>25.03.2025.</a> - Google bumps priority from P4 to P3/S4
+              <a>2025-03-25</a> - Google bumps priority from P4 to P3/S4
             </li>
             <li>
-              <a>31.03.2025.</a> - Follow up with Google; "team is in process of
+              <a>2025-03-31</a> - Follow up with Google; "Team is in process of
               analyzing your report"
             </li>
             <li>
-              <a>14.04.2025.</a> - Bump from S4 to S3; "Product team will
+              <a>2025-04-14</a> - Bump from S4 to S3; "Product team will
               evaluate your report"
             </li>
             <li>
-              <a>23.04.2025.</a> - VRP Panel has decided to issue a reward of{" "}
+              <a>2025-04-23</a> - VRP Panel has decided to issue a reward of{" "}
               <a>$500.00</a>
             </li>
+             <li>
+              <a style={{ color: "red" }}>2025-04-27</a> - Reward appeal (Using Google Gemini to contest the initial decision)
+            </li>
             <li>
-              <a>28.04.2025.</a> - Confirmation that the VRP Panel will review
+              <a>2025-04-28</a> - Confirmation that the VRP Panel will review
               the reward decision
             </li>
             <li>
-              <a>02.05.2025.</a> - Follow up "The VRP Panel is meeting twice a
+              <a>2025-05-02</a> - Follow up "The VRP Panel is meeting twice a
               week, and your report will be looked at in every meeting."
             </li>
             <li>
-              <a>14.05.2025.</a> - Closes another report with the same type of
+              <a style={{ color: "red" }}>2025-05-14</a> - <a style={{ color: "red" }}>Closes</a> another report with the same type of
               attack as duplicate of this one (Removing MFA)
             </li>
           </ul>
           <SpeakerNotes>
-            Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
-            Niti jedna strana ne može sama popraviti cijeli ekosustav.
           </SpeakerNotes>
         </section>
         <section>
           <ul>
             <li>
-              <a>14.05.2025.</a> - Google closes another report with the same
-              type of attack as duplicate of this one (Removing MFA)
+              <a>2025-05-15</a> - Google bumps from P3 to P2
             </li>
             <li>
-              <a>15.05.2025.</a> - Google bumps from P3 to P2
-            </li>
-            <li>
-              <a>15.05.2025.</a> - VRP Panel has decided to issue a reward of{" "}
+              <a>2025-05-15</a> - VRP Panel has decided to issue a reward of{" "}
               <a>$2633.70</a>
             </li>
             <li>
-              <a>30.05.2025.</a> - Google confirms that the fix will be applied
-              in August 2025.
+              <a style={{ color: "red" }}>2025-05-15</a> - Reward appeal (Using Google Gemini to contest the initial decision) Thanks Antonio for being my sanity check!
             </li>
             <li>
-              <a>05.06.2025.</a> - VRP Panel has decided to issue a reward of{" "}
+              <a>2025-05-30</a> - Google confirms that the <a>fix will be applied
+              before the end of August 2025.</a>
+            </li>
+            <li>
+              <a>2025-06-05</a> - VRP Panel has decided to issue a reward of{" "}
               <a>$4366.30</a>
             </li>
             <li>
-              <a style={{color: 'red'}}>01.09.2025.</a> - Retesting, vulnerability still present
+              <a style={{ color: "red" }}>2025-06-06</a> - Reward appeal (Using Google Gemini to contest the initial decision)
             </li>
             <li>
-              <a style={{color: 'red'}}>03.10.2025.</a> - Retesting, vulnerability still present
+              <a style={{ color: "red" }}>2025-06-10</a> - "This is our final decision here."
             </li>
             <li>
-              <a style={{color: 'red'}}>01.11.2025.</a> - Retesting, vulnerability still present
+              <a style={{ color: "red" }}>2025-09-01</a> - Retesting,
+              vulnerability still present
             </li>
             <li>
-              <a>02.12.2025.</a> - Seems that the fix is applied, vulnerability
-              no longer present (or quirky test)
+              <a style={{ color: "red" }}>2025-10-03</a> - Retesting,
+              vulnerability still present
+            </li>
+            <li>
+              <a style={{ color: "red" }}>2025-11-01</a> - Retesting,
+              vulnerability still present
+            </li>
+            <li>
+              <a>2025-12-02</a> - Seems that the fix is applied, vulnerability
+              no longer present (or my test was faulty)
             </li>
           </ul>
           <SpeakerNotes>
-            Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
-            Niti jedna strana ne može sama popraviti cijeli ekosustav.
+            
           </SpeakerNotes>
         </section>
         <section>
           <ul>
             <li>
-              <a style={{color: 'red'}}>28.04.2026.</a> - Kolega s posla na drugom projektu na kojem se također koristi Firebase pokaže novi Jira ticket, "Email verification ne radi"
+              <a style={{ color: "red" }}>2026-04-28</a> - Collegue from work shows me another Jira ticket from another project with the same issue, "accounts verified immidiately"
             </li>
             <li>
-              <a style={{color: 'red'}}>28.04.2026.</a> - Retesting, vulnerability still present
+              <a style={{ color: "red" }}>2026-04-28</a> - Retesting,
+              vulnerability still present
             </li>
             <li>
-              <a style={{color: 'red'}}>28.04.2026.</a> - Otvaram novi report prema Google-u.
+              <a style={{ color: "red" }}>2026-04-28</a> - Reporting again to Google.
             </li>
             <li>
-              <a style={{color: 'red'}}>04.07.2026.</a> - Closing report as duplicate, <a>another</a> security researcher already reported this issue.
+              <a style={{ color: "red" }}>2026-06-26</a> - After beeing ignored for months, sent direct message to Michael Coté (SEM Google Cloud VRP)
             </li>
             <li>
-              <a style={{color: 'orange'}}>26.09.2026.</a> - I decided to go public, sharing the details of the vulnerability with the community.
+              <a style={{ color: "red" }}>2026-07-01</a> - Just seen, no response.
+            </li>
+            <li>
+              <a style={{ color: "red" }}>2026-07-04</a> - Google <a style={{ color: "red" }}>closed</a> report as
+              duplicate, <a>another</a> security researcher already reported
+              this issue. Is it me, lol? (We will never know.)
+            </li>
+            
+            <li>
+              <a style={{ color: "red" }}>2026-08-20</a> - Retesting,
+              vulnerability still present.
+            </li>
+            <li>
+              <a style={{ color: "orange" }}>2026-09-26</a> - I decided to go
+              public, sharing the details of the vulnerability with the
+              community.
             </li>
           </ul>
           <SpeakerNotes>
-            Ovakvi problemi često zahtijevaju suradnju između pružatelja usluga.
-            Niti jedna strana ne može sama popraviti cijeli ekosustav.
+          </SpeakerNotes>
+        </section>
+        <section>
+          <p>33 emails, 549 days later, and devs are still <a style={{ color: "red" }}>left with the vulnerability</a>.</p>
+          <SpeakerNotes>
           </SpeakerNotes>
         </section>
       </section>
