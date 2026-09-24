@@ -296,7 +296,7 @@ function FirebaseAuthDemo() {
           <strong>User:</strong> {userDisplayName}
         </p>
         <p>
-          <strong>Verification:</strong> {verificationStatus}
+          <strong>Verification:</strong> <a style={{ color: (verificationStatus === "VERIFIED" ? "green" : "red") }}>{verificationStatus}</a>
         </p>
         <p>
           <strong>Auth session:</strong> {isLoggedIn ? "ACTIVE" : "INACTIVE"}

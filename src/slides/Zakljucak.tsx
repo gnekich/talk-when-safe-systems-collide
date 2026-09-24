@@ -86,7 +86,8 @@ function Slide() {
         </section>
         <section>
           <h1>You WON!</h1>
-          <p>Unlocked NFC NTAG215 chip, have fun! Hack the world!</p>
+          <p>Unlocked NFC NTAG215 chip, with 540 bytes of storage!
+            <br/>Have fun! Hack the world!</p>
           <p></p>
           <SpeakerNotes>
             Invite Q&A and revisit the two opening questions.
